@@ -63,3 +63,45 @@ body {
 #left_pane h5, ul, address{
     padding-left: 10px;
 }
+#left_pane .input-append input, button{
+    margin-left:10px;
+}
+#pic_slider{
+    background:rgba(255,255,255,0.5);
+    height:300px;
+    color:#fff;
+}
+.title_bar, .title_bar_brown{
+    background-color:#356635;
+    height:20px;
+    width:auto;
+    margin-top:10px;
+    padding: 5px 5px;
+    color:#fff;
+    font-weight: lighter;
+}
+.msg_body{
+    background:rgba(255,255,255,0.7);
+    font-size: 12px;
+    padding-top:5px;
+    padding-left:5px;
+    padding-right:5px;
+    padding-bottom: 1px;
+}
+.title_bar_brown{
+    background-color:#584838;
+}
+#new_scholar_form button{
+    margin-left: 230px;
+}
+#footer .msg_body{
+    font-size:11px;
+    text-align: center;
+    padding:10px;
+}
+#sponsors .msg_body img{
+    padding-left:27px;
+}
+#sponsors .msg_body p{
+    color:#808080;
+}
