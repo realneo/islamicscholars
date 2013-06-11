@@ -105,3 +105,11 @@ body {
 #sponsors .msg_body p{
     color:#808080;
 }
+#register_form input, lable{
+    padding:10px;
+    margin: 5px;
+    font-size:20px;
+}
+.temp_place_holder{
+    background:rgba(255,255,255,0.5);
+}
