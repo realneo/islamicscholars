@@ -24,7 +24,7 @@
                             <li class="active"><a href="index.php">Home</a></li>
                             <li><a href="#">About Us</a></li>
                             <li><a href="scholars.php">Imams & Scholars</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li><a href="events.php">Events</a></li>
                             <li><a href="#">Library</a></li>
                             <li><a href="#">Contact Us</a></li>
                     </div><!-- nav -->
