@@ -4,7 +4,7 @@
         
         //Database connect 
         public function __construct(){
-            $db = new DB_Class();
+            $this->db = new DB_Class();
         }
 
         //Registration process 
