@@ -1,98 +1,229 @@
-<?php include('template/header.php'); ?>
-<?php include('template/left_pane.php');?>      
-    <div class='span6' id='content'>
+<?php
 
-        <?php include('modules/image_slider.php'); ?>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+	//define('ENVIRONMENT', 'development');
+	define('ENVIRONMENT', 'production');
+	define("WEB_URL", "http://".$_SERVER["HTTP_HOST"]);
+	define('PROJECTNAME', 'islamicscholars');
+	define('STATIC_URL', WEB_URL.'/'.PROJECTNAME);
+	define('EVENT_UPLOAD_URL', 'data/upload/event');
+	define('LIB_UPLOAD_URL', 'data/upload/lib');
+	define('SCHOLAR_UPLOAD_URL', 'data/upload/scholar');
 
-        <div id="welcome_msg" class="span9">
-            <div class="title_bar">Welcome to The Foundation of Sheikhs and Islamic Scholars of Tanzania</div><!-- title_bar -->
-            <div class="msg_body">
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Donec ullamcorper nulla non metus auctor fringilla.
-                <button type="submit" class="btn  btn-mini btn-inverse">Read More</button>
-            </div><!-- msg_body-->
-        </div><!-- welcome_msg -->
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
 
-    </div><!-- content -->
+/*
+ * ---------------------------------------------------------------
+ * add by  wanglei  smarty  路径配置
+ * ---------------------------------------------------------------
+ */
 
-    <div class='row'>
-        <div class='span4'>
-            <div id="new_scholar_form" class="span4">
-                <div class="title_bar_brown">Add an Islamic Scholar / Sheikh</div><!-- title_bar -->
-                <div class="msg_body">
-                    <form name="new_scholar_form" action="" method='post'>
-                        <input class="input-xlarge" type="text" placeholder="Sheikh Ibn Kathir" />
-                        <button type="submit" class="btn btn-success offset2">Add</button>
-                    </form>
-                </div>
-            </div><!-- new_scholar_form -->
 
-            <div id="recent_scholars" class="span4">
-                <div class="title_bar_brown">Recently Added Scholars / Sheikhs</div><!-- title_bar -->
-                <div class="msg_body">
-                    <table class='table table-condensed table-hover'>
-                        <tr>
-                            <td>7th July 2013</td>
-                            <td>Anwar Al Awlaki</td>
-                            <td><button type="submit" class="btn btn-small btn-inverse">View</button></td>
-                        </tr>
-                        <tr>
-                            <td>7th July 2013</td>
-                            <td>Ibn Kathir</td>
-                            <td><button type="submit" class="btn btn-small btn-inverse">View</button></td>
-                        </tr>
-                        <tr>
-                            <td>7th July 2013</td>
-                            <td>Ibn Taimia</td>
-                            <td><button type="submit" class="btn btn-small btn-inverse">View</button></td>
-                        </tr>
-                    </table>
-                </div><!-- msg_body -->
-            </div><!-- recent_scholars --> 
+if(!defined('ROOT'))
+	define('ROOT',dirname(__FILE__));
+if (!defined('DS'))
+	define('DS', DIRECTORY_SEPARATOR);//兼容linux,windows. 表示"/"
 
-            <div class="span9">
-                <br />
-                <div class="msg_body">
-                    <div class="input-append">
-                        <input class="input-xxlarge" id="appendedInputButton" type="text" placeholder='Type your Question Here'>
-                        <button class="btn btn-success" type="button">Ask a Question</button>
-                    </div>
-                </div>
-            </div><!-- questions -->
 
-            <div class='span9'>
-                <div class='msg_body'>
-                    <table class='table table-condensed table-hover'>
-                        <tr>
-                            <td>1</td>
-                            <td>Oh Sheikh enlighten me on how I should pray tahajjud?</td>
-                            <td><button type="submit" class="btn btn-small btn-inverse">View Answer</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Oh Sheikh enlighten me on how I should pray tahajjud?</td>
-                            <td><button type="submit" class="btn btn-small btn-inverse">View Answer</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Oh Sheikh enlighten me on how I should pray tahajjud?</td>
-                            <td><button type="submit" class="btn btn-small btn-inverse">View Answer</button></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
 
-        </div>
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
+	
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
 
-        <div class='span5'>
-            <div id="join_forum" class="span5">
-                <div class="title_bar_brown">Join our Discussion Area Today</div><!-- title_bar -->
-                <div class="msg_body">
-                    This is our discussion area
-                </div>
-            </div><!-- join_forum -->     
-        </div>
-    </div>
-</div><!-- row [main_content] -->
-<br />
-<?php include('template/footer.php');?> 
-<?php include('template/sponsors.php');?>
+		default:
+			exit('The application environment is not set correctly.');
+	}
+}
+
+/*
+ *---------------------------------------------------------------
+ * SYSTEM FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" folder.
+ * Include the path if the folder is not in the same  directory
+ * as this file.
+ *
+ */
+	$system_path = 'system';
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * folder then the default one you can set its name here. The folder
+ * can also be renamed or relocated anywhere on your server.  If
+ * you do, use a full server path. For more info please see the user guide:
+ * http://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ *
+ */
+	$application_folder = 'application';
+
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here.  For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT:  If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller.  Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ *
+ */
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  Mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (realpath($system_path) !== FALSE)
+	{
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	// this global constant is deprecated.
+	define('EXT', '.php');
+
+	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path));
+
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+
+
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		define('APPPATH', $application_folder.'/');
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.'/'))
+		{
+			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.'/');
+	}
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
+
+
+
+/* End of file index.php */
+/* Location: ./index.php */

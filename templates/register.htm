@@ -1,0 +1,32 @@
+{include file='header.htm'}
+
+<div class='row'>
+    <div class='span8 temp_place_holder' style='padding:210px 0px;'><h1 align="center">Advert</h1></div>
+    
+    <div class='span4'>
+        
+         <div class='title_bar_brown'>Please fill in the form to Register</div><!-- title_bar_brown -->
+        <div class='msg_body'>
+            <form name='register_form' action='{$static_url}/index.php/index/register' method='post'>
+                    <h2>Sign Up</h2>
+                    <label>First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="span3">
+                    <label>Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="span3">
+                    <label>Email Address</label>
+                    <input type="email" id="email" name="email" class="span3">
+                    <label>Re-Enter Email</label>
+                    <input type="text" id="re_email" name="re_email" class="span3">
+                    <label>Password</label>
+                    <input type="password" id="password" name="password" class="span3">
+                    <label><input type="checkbox" name="terms"> I agree with the <a href="#">Terms and Conditions</a>.</label>
+                    <input type="submit" value="Sign up" name="signup"  onClick="return check_register_data();" class="btn btn-success pull-right">
+                    <div class="clearfix"></div>
+                </form>
+        </div><!-- msg_body --> 
+    </div>
+</div>
+
+
+{include file='footer.htm'}
+{include file='sponsors.htm'}
