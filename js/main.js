@@ -41,4 +41,11 @@ $(function(){
         $('#bio_book').slideUp();
         $('#close_bio_book').delay(500).fadeOut();
     });
+    
+    $(document).ready(function(){
+        $('#msg_body').delay(500).effect( "slide", {direction:'up'}, "slow");
+        $('#advertising_spot').delay(1000).effect( "slide", "slow" );
+        $('#footer').delay(1500).effect( "slide", "slow" );
+        $('#sponsors').delay(2000).effect( "slide", "slow" );
+    });
 });
