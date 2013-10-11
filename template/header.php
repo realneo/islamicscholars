@@ -13,18 +13,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="img/logo.png" type="image/ico" rel="icon">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" charset="utf-8" />
-		<link type="text/css" rel="stylesheet" href="css/flexslider/flexslider.css" />
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type='text/javascript' src='js/jquery-1.9.1.js'></script>
-        <script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
-        <script type='text/javascript' src='js/jqFancyTransitions.1.8.min.js'></script>
-        <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
-        <script type='text/javascript' src='js/jquery-ui-1.10.3.custom.min.js'></script>
-        <script type='text/javascript' src='js/main.js'></script>
+        <?php include 'header_tag.php'; ?>
     </head>
     <body>
         <div class='container'>

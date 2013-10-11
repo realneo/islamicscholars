@@ -47,5 +47,9 @@ $(function(){
         $('#advertising_spot').delay(1000).effect( "slide", "slow" );
         $('#footer').delay(1500).effect( "slide", "slow" );
         $('#sponsors').delay(2000).effect( "slide", "slow" );
+        $('.carousel').carousel({
+            interval:4000
+        });
     });
+    
 });
