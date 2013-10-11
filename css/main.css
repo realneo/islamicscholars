@@ -40,14 +40,15 @@ body {
 h3{
     font-weight: lighter;
 }
-#header h3{
+#header .top_heading{
     color: #fff;
     font-weight: lighter;
     padding-top:30px;
+    font-size:22px;
 }
 #logo{
     position:absolute;
-    top:20px;
+    top:0px;
 }
 .container{
     min-width: 960px;
@@ -137,7 +138,7 @@ h3{
 .thumbnails li{
    background:rgba(0,0,0,0.5); 
 }
-@charset "utf-8";
+
 /* CSS Document */
 html,body,form{ margin:0px; padding:0px; font-family:Ebrima, Arial, Helvetica, sans-serif; font-size:12px; color:#666; empty-cells:hide;}
 table.calendar{border-style: solid; border-width: 1px; border-width:1px; border-color:#666; -moz-box-shadow:0px 0px 4px #CCCCCC; -webkit-box-shadow:0px 0px 4px #CCCCCC; box-shadow:0px 0px 4px #CCCCCC; }
@@ -177,4 +178,5 @@ background: -ms-linear-gradient(top,  #6cb7f3 0%,#388be8 100%) !important;
 background: linear-gradient(to bottom,  #6cb7f3 0%,#388be8 100%) !important;
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', endColorstr='#388be8',GradientType=0 ) !important; color:#FFF  !important; font-weight:bold; -moz-box-shadow:0px 0px 18px #1F68BA inset; -webkit-box-shadow:0px 0px 18px #1F68BA inset; box-shadow:0px 0px 18px #1F68BA inset;
 }
-.currentday:hover{-moz-box-shadow:0px 0px 24px #074080 inset !important; -webkit-box-shadow:0px 0px 24px #074080 inset !important; box-shadow:0px 0px 24px #074080 inset !important;}
+.currentday:hover{-moz-box-shadow:0px 0px 24px #074080 inset !important; -webkit-box-shadow:0px 0px 24px #074080 inset !important; box-shadow:0px 0px 24px #074080 inset !important;
+}

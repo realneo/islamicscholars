@@ -58,7 +58,7 @@
 					}
 				?>
                     <div id='green_strip'></div><!-- green_strip -->
-                    <h3 class='span9 offset1'>The Foundation of Sheikhs and Islamic Scholars of Tanzania</h3>
+                    <h3 class='span9 top_heading'>The Foundation of Sheikhs and Islamic Scholars of Tanzania</h3>
                     <div id='logo'><img src='img/logo.png' alt='logo' width='120'/></div><!-- logo -->
                     <a href="#"><button class="btn btn-large btn-warning span2 offset7" type="button">Donate Now</button></a>
                     <div id='nav' class="nav nav-tabs spannav lead">
