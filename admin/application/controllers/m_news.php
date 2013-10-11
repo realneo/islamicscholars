@@ -28,9 +28,11 @@ class M_news extends CI_Controller {
 		$pagenum=($pagenum)?($pagenum):1;
 		$offset =($pagenum-1)*$limit;
 		$configs['uri_segment']=3;
-		$configs['base_url']='/hmvc/index.php/m_news/index/'.$pagenum.'/';
+		$configs['base_url']='/'.PROJECTNAME.'/index.php/m_news/index/';
 		$configs['total_rows'] =$this->news_model->get_news_count();
 		$configs['per_page'] = $limit;
+		$no = ($pagenum-1)*$limit+1;
+
 		$news_page=$this->common_module->page_all($configs);
 		$news_lst=$this->news_model->get_news($limit,$offset);
 		$this->cismarty->view('news_list',get_defined_vars());
@@ -44,11 +46,10 @@ class M_news extends CI_Controller {
 			$name      = $_POST['name'];
 			$brief   = $_POST['brief'];
 			$description   = $_POST['description'];
-	//		$date   = $_POST['date'];
-			$date   = "";
+			$date   = $_POST['date'];
 
 			$result =$this->news_model->insert($name,$brief,$description,$date);
-			$seturl ="/hmvc/index.php/m_news/index/1/";
+			$seturl ="/".PROJECTNAME."/index.php/m_news/index/1/";
 			Header("Location: $seturl"); 
 			
 		}
@@ -68,11 +69,10 @@ class M_news extends CI_Controller {
 			$name      = $_POST['name'];
 			$brief   = $_POST['brief'];
 			$description   = $_POST['description'];
-	//		$date   = $_POST['date'];
-			$date   = "";
+			$date   = $_POST['date'];
 
 			$result =$this->news_model->update($edit_id, $name,$brief,$description,$date);
-			$seturl ="/hmvc/index.php/m_news/index/1/";
+			$seturl ="/".PROJECTNAME."/index.php/m_news/index/1/";
 			Header("Location: $seturl"); 
 			
 		}
@@ -92,7 +92,7 @@ class M_news extends CI_Controller {
 		$edit_id = substr($temp, 0, $pos);			
 
 		$result =$this->news_model->remove($edit_id);
-		$seturl ="/hmvc/index.php/m_news/index/1/";
+		$seturl ="/".PROJECTNAME."/index.php/m_news/index/1/";
 		Header("Location: $seturl"); 
 	}	
 }

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2013-06-12 03:55:58
+<?php /* Smarty version Smarty-3.1.11, created on 2013-08-12 09:48:18
          compiled from "/Users/Administrator/Sites/islamicscholars/admin/templates/event_list.htm" */ ?>
-<?php /*%%SmartyHeaderCode:90156565551b7d52e14fd92-69250139%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:189416820452089342640cc8-82308303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '114f7e41df81caab6afe33180d2418b731912d48' => 
     array (
       0 => '/Users/Administrator/Sites/islamicscholars/admin/templates/event_list.htm',
-      1 => 1370988053,
+      1 => 1371508571,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '90156565551b7d52e14fd92-69250139',
+  'nocache_hash' => '189416820452089342640cc8-82308303',
   'function' => 
   array (
   ),
@@ -19,14 +19,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'static_url' => 0,
     'event_lst' => 0,
+    'no' => 0,
     'value' => 0,
-    'page_man' => 0,
+    'event_page' => 0,
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_51b7d52e3a18f1_63930637',
+  'unifunc' => 'content_52089342760d92_09271615',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_51b7d52e3a18f1_63930637')) {function content_51b7d52e3a18f1_63930637($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_52089342760d92_09271615')) {function content_52089342760d92_09271615($_smarty_tpl) {?>
 <!doctype html>
 <html lang="en">
 
@@ -90,7 +91,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body>
     <header id="header">
             <hgroup>
-                    <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
+                    <h1 class="site_title"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_event/index/1">Website Admin</a></h1>
                     <h2 class="section_title">Dashboard</h2>
                     <div class="btn_view_site"><a href="../index.php">View Site</a></div>
             </hgroup>
@@ -103,20 +105,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <div class="breadcrumbs_container">
             <article class="breadcrumbs">
-                <a href="home.php">Website Admin</a> 
+                <a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_event/index/1">Website Admin</a> 
                 <div class="breadcrumb_divider"></div> 
                 <a class="current">View Events</a>
             </article>
         </div>
     </section><!-- end of secondary bar -->
     <aside id="sidebar" class="column">
-<!--
-        <h3>Content</h3>
-        <ul class="toggle">
-            <li class="icn_new_article"><a href="#">Introduction Message</a></li>
-            <li class="icn_edit_article"><a href="#">About Us</a></li>
-        </ul>
--->
         <h3>Events</h3>
         <ul class="toggle">
             <li class="icn_categories"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
@@ -131,27 +127,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <li class="icn_view_users"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_user/index/1" >View Users</a></li>
         </ul>
-<!--
-        <h3>Projects</h3>
+        <h3>Scholars</h3>
         <ul class="toggle">
-                <li class="icn_folder"><a href="#">Add Project</a></li>
-                <li class="icn_photo"><a href="view_projects.php">View Projects</a></li>
+            <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_scholar/add/" >Add Scholar</a></li>
+            <li class="icn_edit_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_scholar/index/1" >View Scholars</a></li>
         </ul>
--->
-        <h3>News</h3>
+        <h3>Libraries</h3>
+        <ul class="toggle">
+                <li class="icn_folder"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_lib/add/">Add Library</a></li>
+                <li class="icn_photo"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_lib/index/1">View Libraries</a></li>
+        </ul>
+		<h3>News</h3>
         <ul class="toggle">
             <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_news/add/" >Add News</a></li>
             <li class="icn_edit_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_news/index/1" >View News</a></li>
         </ul>
-<!--
-        <h3>Biography</h3>
+		<h3>Calendar</h3>
         <ul class="toggle">
-            <li class="icn_new_article"><a href="biography.php">Add Biography</a></li>
-            <li class="icn_edit_article"><a href="view_biography.php">View Biography</a></li>
+            <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_calendar/index/" >Set Calendar</a></li>
         </ul>
--->
         <h3>Admin</h3>
         <ul class="toggle">
             <li class="icn_jump_back"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
@@ -191,8 +192,8 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 ?> 
                             
                                         <tr>
-                                            <td><?php echo $_smarty_tpl->tpl_vars['value']->value['evt_id'];?>
-</td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['no']->value++;?>
+ </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['value']->value['evt_date'];?>
 </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['value']->value['evt_title'];?>
@@ -208,6 +209,7 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 /static/images/admin/icn_trash.png' title='Trash'></a>
                                             </td>
                                         </tr>
+                                       
                   <?php } ?>
 
                                         			</tbody> 
@@ -215,8 +217,8 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
                 </div><!-- end of #tab2 -->	
             </div><!-- end of .tab_container -->		
         </article><!-- end of content manager article -->
-    <div class="spacer">
-    <?php echo $_smarty_tpl->tpl_vars['page_man']->value;?>
+    <div class="spacer" align="right" style="margin-right:30px; margin-top:10px">
+    <?php echo $_smarty_tpl->tpl_vars['event_page']->value;?>
 
     </div>
     </section>

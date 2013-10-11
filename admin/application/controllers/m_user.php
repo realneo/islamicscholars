@@ -28,9 +28,11 @@ class M_user extends CI_Controller {
 		$pagenum=($pagenum)?($pagenum):1;
 		$offset =($pagenum-1)*$limit;
 		$configs['uri_segment']=3;
-		$configs['base_url']='/islamicscholars/admin/index.php/m_user/index/'.$pagenum.'/';
+		$configs['base_url']='/'.PROJECTNAME.'/index.php/m_user/index/';
 		$configs['total_rows'] =$this->user_model->get_users_count();
 		$configs['per_page'] = $limit;
+		$no = ($pagenum-1)*$limit+1;
+
 		$user_page=$this->common_module->page_all($configs);
 		$user_lst=$this->user_model->get_users($limit,$offset);
 		$this->cismarty->view('user_list',get_defined_vars());
@@ -45,7 +47,7 @@ class M_user extends CI_Controller {
 			$password   = $_POST['password'];
 
 			$result =$this->user_model->insert($username,$password);
-			$seturl ="/islamicscholars/admin/index.php/m_user/index/1/";
+			$seturl ="/".PROJECTNAME."/index.php/m_user/index/1/";
 			Header("Location: $seturl"); 
 			
 		}
@@ -60,7 +62,7 @@ class M_user extends CI_Controller {
 		$edit_id = substr($temp, 0, $pos);			
 
 		$result =$this->user_model->remove($edit_id);
-		$seturl ="/islamicscholars/admin/index.php/m_user/index/1/";
+		$seturl ="/".PROJECTNAME."/index.php/m_user/index/1/";
 		Header("Location: $seturl"); 
 	}	
 }

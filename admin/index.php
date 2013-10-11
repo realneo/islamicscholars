@@ -18,10 +18,15 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	//define('ENVIRONMENT', 'development');
-	define('ENVIRONMENT', 'production');
-	define('STATIC_URL', 'http://localhost:8888/islamicscholars/admin');
-
+	define('ENVIRONMENT', 'development');
+	//define('ENVIRONMENT', 'production');
+	define("WEB_URL", "http://".$_SERVER["HTTP_HOST"]);
+	define('PROJECTNAME', 'islamicscholars/admin');
+	define('STATIC_URL', WEB_URL.'/'.PROJECTNAME);
+	define('EVENT_UPLOAD_URL', 'data/upload/event');
+	define('LIB_UPLOAD_URL', 'data/upload/lib');
+	define('SCHOLAR_UPLOAD_URL', 'data/upload/scholar');
+ 
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

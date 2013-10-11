@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2013-06-11 19:01:07
+<?php /* Smarty version Smarty-3.1.11, created on 2013-06-18 15:40:14
          compiled from "C:\xampp\htdocs\hmvc\templates\event_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:755451b73247c70d74-27256332%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8427b0443e332bfd3a0a307373a0f61763da4f4b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\hmvc\\templates\\event_list.htm',
-      1 => 1370970053,
+      1 => 1371490571,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'static_url' => 0,
     'event_lst' => 0,
+    'no' => 0,
     'value' => 0,
-    'page_man' => 0,
+    'event_page' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -90,7 +91,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <body>
     <header id="header">
             <hgroup>
-                    <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
+                    <h1 class="site_title"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_event/index/1">Website Admin</a></h1>
                     <h2 class="section_title">Dashboard</h2>
                     <div class="btn_view_site"><a href="../index.php">View Site</a></div>
             </hgroup>
@@ -103,20 +105,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <div class="breadcrumbs_container">
             <article class="breadcrumbs">
-                <a href="home.php">Website Admin</a> 
+                <a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_event/index/1">Website Admin</a> 
                 <div class="breadcrumb_divider"></div> 
                 <a class="current">View Events</a>
             </article>
         </div>
     </section><!-- end of secondary bar -->
     <aside id="sidebar" class="column">
-<!--
-        <h3>Content</h3>
-        <ul class="toggle">
-            <li class="icn_new_article"><a href="#">Introduction Message</a></li>
-            <li class="icn_edit_article"><a href="#">About Us</a></li>
-        </ul>
--->
         <h3>Events</h3>
         <ul class="toggle">
             <li class="icn_categories"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
@@ -131,27 +127,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <li class="icn_view_users"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_user/index/1" >View Users</a></li>
         </ul>
-<!--
-        <h3>Projects</h3>
+        <h3>Scholars</h3>
         <ul class="toggle">
-                <li class="icn_folder"><a href="#">Add Project</a></li>
-                <li class="icn_photo"><a href="view_projects.php">View Projects</a></li>
+            <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_scholar/add/" >Add Scholar</a></li>
+            <li class="icn_edit_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_scholar/index/1" >View Scholars</a></li>
         </ul>
--->
-        <h3>News</h3>
+        <h3>Libraries</h3>
+        <ul class="toggle">
+                <li class="icn_folder"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_lib/add/">Add Library</a></li>
+                <li class="icn_photo"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_lib/index/1">View Libraries</a></li>
+        </ul>
+		<h3>News</h3>
         <ul class="toggle">
             <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_news/add/" >Add News</a></li>
             <li class="icn_edit_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_news/index/1" >View News</a></li>
         </ul>
-<!--
-        <h3>Biography</h3>
+		<h3>Calendar</h3>
         <ul class="toggle">
-            <li class="icn_new_article"><a href="biography.php">Add Biography</a></li>
-            <li class="icn_edit_article"><a href="view_biography.php">View Biography</a></li>
+            <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_calendar/index/" >Set Calendar</a></li>
         </ul>
--->
         <h3>Admin</h3>
         <ul class="toggle">
             <li class="icn_jump_back"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
@@ -191,8 +192,8 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 ?> 
                             
                                         <tr>
-                                            <td><?php echo $_smarty_tpl->tpl_vars['value']->value['evt_id'];?>
-</td>
+                                            <td><?php echo $_smarty_tpl->tpl_vars['no']->value++;?>
+ </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['value']->value['evt_date'];?>
 </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['value']->value['evt_title'];?>
@@ -208,6 +209,7 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 /static/images/admin/icn_trash.png' title='Trash'></a>
                                             </td>
                                         </tr>
+                                       
                   <?php } ?>
 
                                         			</tbody> 
@@ -215,8 +217,8 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
                 </div><!-- end of #tab2 -->	
             </div><!-- end of .tab_container -->		
         </article><!-- end of content manager article -->
-    <div class="spacer">
-    <?php echo $_smarty_tpl->tpl_vars['page_man']->value;?>
+    <div class="spacer" align="right" style="margin-right:30px; margin-top:10px">
+    <?php echo $_smarty_tpl->tpl_vars['event_page']->value;?>
 
     </div>
     </section>

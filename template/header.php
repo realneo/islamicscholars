@@ -1,31 +1,73 @@
-<?php include('header_tag.php'); ?>
+<?php
+
+    include("classes/config.php");
+    session_start();
+    
+	if (isset($_SESSION["userlogin"])) {
+			$member = $_SESSION["userlogin"];
+		}
+		else {
+			$member = "";
+		}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="img/logo.png" type="image/ico" rel="icon">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" charset="utf-8" />
+		<link type="text/css" rel="stylesheet" href="css/flexslider/flexslider.css" />
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type='text/javascript' src='js/jquery-1.9.1.js'></script>
+        <script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+        <script type='text/javascript' src='js/jqFancyTransitions.1.8.min.js'></script>
+        <script type='text/javascript' src='js/jquery.simplemodal.js'></script>
+        <script type='text/javascript' src='js/jquery-ui-1.10.3.custom.min.js'></script>
+        <script type='text/javascript' src='js/main.js'></script>
+    </head>
     <body>
         <div class='container'>
             <div class='row'>
                 <?php include('calendar.php'); ?>
                 <div id='header'class='span6'>
-                    <div id='row'>
-                        <div class='span6 offset3'>
-                            <div id='register_now'>Don't have an account? <a href='register.php'>Register Now</a></div><!-- register_now -->
-                            <div id="login_form">
-                                <form class="form-inline">
-                                    <input type="email" class="input-medium" placeholder="Email">
-                                    <input type="password" class="input-medium" placeholder="Password">
-                                    <button type="submit" class="btn btn-success">Sign in</button>
-                                </form>
-                            </div><!-- login_form --> 
+				<?php
+				if(!isset($_SESSION["userlogin"])){
+					echo '<div id="row" style="margin-bottom:70px;margin-top:10px;">
+                        <div class="span6 offset3">
+                            <div class="pull-right" style="color:white;">
+                                Welcome Guest
+                                <a href="register.php" class="btn btn-inverse btn-mini">Register Now</a> -
+                                <a href="signin.php" class="btn btn-inverse btn-mini">Sign In</a>
+                            </div>
                         </div>
-                    </div>
+                    </div>';
+					}
+					else{
+					echo '<div id="row" style="margin-bottom:70px;margin-top:10px;">
+                        <div class="span6 offset3">
+                            <div class="pull-right" style="color:white;">
+                            Welcome '.$member.' <br>
+                            <a href="settings.php" class="btn btn-mini">
+                                <i class="icon icon-wrench" title="Settings"></i>
+                                Settings</a>&nbsp;<a href="logout.php" class="btn btn-mini">
+                                <i class="icon icon-off" ></i> Logout</a>
+                            </div>
+                        </div>
+                    </div>';
+					}
+				?>
                     <div id='green_strip'></div><!-- green_strip -->
-                    <h3 class='span8 offset1'>The Foundation of Sheikhs and Islamic Scholars of Tanzania</h3>
+                    <h3 class='span9 offset1'>The Foundation of Sheikhs and Islamic Scholars of Tanzania</h3>
                     <div id='logo'><img src='img/logo.png' alt='logo' width='120'/></div><!-- logo -->
-                    <button class="btn btn-large btn-warning span2 offset7" type="button">Donate Now</button>
-                    <div id='nav' class="nav nav-tabs span7 lead">
+                    <a href="#"><button class="btn btn-large btn-warning span2 offset7" type="button">Donate Now</button></a>
+                    <div id='nav' class="nav nav-tabs spannav lead">
                             <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="about.php">About Us</a></li>
                             <li><a href="scholars.php">Imams & Scholars</a></li>
                             <li><a href="events.php">Events</a></li>
-                            <li><a href="#">Library</a></li>
+                            <li><a href="library.php">Library</a></li>
+							<li><a href="questions.php">FAQ</a></li>
                             <li><a href="#">Contact Us</a></li>
                     </div><!-- nav -->
                 </div><!-- header -->

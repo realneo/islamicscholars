@@ -55,7 +55,7 @@
 <body>
     <header id="header">
             <hgroup>
-                    <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
+                    <h1 class="site_title"><a href="{$static_url}/index.php/m_event/index/1">Website Admin</a></h1>
                     <h2 class="section_title">Dashboard</h2>
                     <div class="btn_view_site"><a href="../index.php">View Site</a></div>
             </hgroup>
@@ -67,20 +67,13 @@
         </div>
         <div class="breadcrumbs_container">
             <article class="breadcrumbs">
-                <a href="home.php">Website Admin</a> 
+                <a href="{$static_url}/index.php/m_event/index/1">Website Admin</a> 
                 <div class="breadcrumb_divider"></div> 
                 <a class="current">View Events</a>
             </article>
         </div>
     </section><!-- end of secondary bar -->
     <aside id="sidebar" class="column">
-<!--
-        <h3>Content</h3>
-        <ul class="toggle">
-            <li class="icn_new_article"><a href="#">Introduction Message</a></li>
-            <li class="icn_edit_article"><a href="#">About Us</a></li>
-        </ul>
--->
         <h3>Events</h3>
         <ul class="toggle">
             <li class="icn_categories"><a href="{$static_url}/index.php/m_event/add/" >Add Event</a></li>
@@ -91,25 +84,25 @@
             <li class="icn_add_user"><a href="{$static_url}/index.php/m_user/add/" >Add New User</a></li>
             <li class="icn_view_users"><a href="{$static_url}/index.php/m_user/index/1" >View Users</a></li>
         </ul>
-<!--
-        <h3>Projects</h3>
+        <h3>Scholars</h3>
         <ul class="toggle">
-                <li class="icn_folder"><a href="#">Add Project</a></li>
-                <li class="icn_photo"><a href="view_projects.php">View Projects</a></li>
+            <li class="icn_new_article"><a href="{$static_url}/index.php/m_scholar/add/" >Add Scholar</a></li>
+            <li class="icn_edit_article"><a href="{$static_url}/index.php/m_scholar/index/1" >View Scholars</a></li>
         </ul>
--->
-        <h3>News</h3>
+        <h3>Libraries</h3>
+        <ul class="toggle">
+                <li class="icn_folder"><a href="{$static_url}/index.php/m_lib/add/">Add Library</a></li>
+                <li class="icn_photo"><a href="{$static_url}/index.php/m_lib/index/1">View Libraries</a></li>
+        </ul>
+		<h3>News</h3>
         <ul class="toggle">
             <li class="icn_new_article"><a href="{$static_url}/index.php/m_news/add/" >Add News</a></li>
             <li class="icn_edit_article"><a href="{$static_url}/index.php/m_news/index/1" >View News</a></li>
         </ul>
-<!--
-        <h3>Biography</h3>
+		<h3>Calendar</h3>
         <ul class="toggle">
-            <li class="icn_new_article"><a href="biography.php">Add Biography</a></li>
-            <li class="icn_edit_article"><a href="view_biography.php">View Biography</a></li>
+            <li class="icn_new_article"><a href="{$static_url}/index.php/m_calendar/index/" >Set Calendar</a></li>
         </ul>
--->
         <h3>Admin</h3>
         <ul class="toggle">
             <li class="icn_jump_back"><a href="{$static_url}/index.php/m_login/logout/">Logout</a></li>
@@ -144,7 +137,7 @@
                 {foreach name=outer item=value from=$event_lst} 
                             
                                         <tr>
-                                            <td>{$value.evt_id}</td>
+                                            <td>{$no++} </td>
                                             <td>{$value.evt_date}</td>
                                             <td>{$value.evt_title}</td>
                                              <td>
@@ -152,6 +145,7 @@
                                                 <a href='{$static_url}/index.php/m_event/delete/asdf87asdf7868{$value.evt_id}7868sad6f8' class='delete'><input type='image'src='{$static_url}/static/images/admin/icn_trash.png' title='Trash'></a>
                                             </td>
                                         </tr>
+                                       
                   {/foreach}
 
                                         			</tbody> 
@@ -159,8 +153,8 @@
                 </div><!-- end of #tab2 -->	
             </div><!-- end of .tab_container -->		
         </article><!-- end of content manager article -->
-    <div class="spacer">
-    {$page_man}
+    <div class="spacer" align="right" style="margin-right:30px; margin-top:10px">
+    {$event_page}
     </div>
     </section>
     <script type="text/javascript">

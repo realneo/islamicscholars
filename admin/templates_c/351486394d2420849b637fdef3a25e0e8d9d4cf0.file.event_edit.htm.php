@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2013-06-11 18:20:38
+<?php /* Smarty version Smarty-3.1.11, created on 2013-06-17 19:50:32
          compiled from "C:\xampp\htdocs\hmvc\templates\event_edit.htm" */ ?>
 <?php /*%%SmartyHeaderCode:2202551b7405571fdd9-04700641%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '351486394d2420849b637fdef3a25e0e8d9d4cf0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\hmvc\\templates\\event_edit.htm',
-      1 => 1370967624,
+      1 => 1371490576,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'static_url' => 0,
     'param' => 0,
     'data' => 0,
+    'image_path' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -50,6 +51,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /static/js/hideshow.js" type="text/javascript"></script>
 	<script src="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /static/js/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/static/js/datetimepicker_css.js"></script>
 	<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /static/js/jquery.equalHeight.js"></script>
 	<script type="text/javascript">
@@ -89,7 +92,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <body>    <header id="header">
             <hgroup>
-                    <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
+                    <h1 class="site_title"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_event/index/1">Website Admin</a></h1>
                     <h2 class="section_title">Dashboard</h2>
                     <div class="btn_view_site"><a href="../index.php">View Site</a></div>
             </hgroup>
@@ -97,24 +101,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <section id="secondary_bar">
         <div class="user">
             <p>admin <!--(<a href="#">3 Messages</a>)--></p>
-            <a class="logout_user" href="{$static_url}/index.php/m_login/logout/" title="Logout">Logout</a>
+            <a class="logout_user" href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_login/logout/" title="Logout">Logout</a>
         </div>
         <div class="breadcrumbs_container">
             <article class="breadcrumbs">
-                <a href="home.php">Website Admin</a> 
+                <a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_event/index/1">Website Admin</a> 
                 <div class="breadcrumb_divider"></div> 
                 <a class="current">Add an Event</a>
             </article>
         </div>
     </section><!-- end of secondary bar -->
     <aside id="sidebar" class="column">
-<!--
-        <h3>Content</h3>
-        <ul class="toggle">
-            <li class="icn_new_article"><a href="#">Introduction Message</a></li>
-            <li class="icn_edit_article"><a href="#">About Us</a></li>
-        </ul>
--->
         <h3>Events</h3>
         <ul class="toggle">
             <li class="icn_categories"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
@@ -129,30 +128,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <li class="icn_view_users"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_user/index/1" >View Users</a></li>
         </ul>
-<!--
-        <h3>Projects</h3>
+        <h3>Scholars</h3>
         <ul class="toggle">
-                <li class="icn_folder"><a href="#">Add Project</a></li>
-                <li class="icn_photo"><a href="view_projects.php">View Projects</a></li>
+            <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_scholar/add/" >Add Scholar</a></li>
+            <li class="icn_edit_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_scholar/index/1" >View Scholars</a></li>
         </ul>
--->        
-        <h3>News</h3>
+        <h3>Libraries</h3>
+        <ul class="toggle">
+                <li class="icn_folder"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_lib/add/">Add Library</a></li>
+                <li class="icn_photo"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_lib/index/1">View Libraries</a></li>
+        </ul>
+		<h3>News</h3>
         <ul class="toggle">
             <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_news/add/" >Add News</a></li>
             <li class="icn_edit_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
 /index.php/m_news/index/1" >View News</a></li>
         </ul>
-<!--
-        <h3>Biography</h3>
+		<h3>Calendar</h3>
         <ul class="toggle">
-            <li class="icn_new_article"><a href="biography.php">Add Biography</a></li>
-            <li class="icn_edit_article"><a href="view_biography.php">View Biography</a></li>
+            <li class="icn_new_article"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_calendar/index/" >Set Calendar</a></li>
         </ul>
--->
         <h3>Admin</h3>
         <ul class="toggle">
-            <li class="icn_jump_back"><a href="{$static_url}/index.php/m_login/logout/">Logout</a></li>
+            <li class="icn_jump_back"><a href="<?php echo $_smarty_tpl->tpl_vars['static_url']->value;?>
+/index.php/m_login/logout/">Logout</a></li>
         </ul>
 
         <footer>
@@ -170,7 +175,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="module_content">
             <fieldset>
                 <label>Title</label>
-                <input type="text" name ="name" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['evt_title'];?>
+                <input type="text" name ="name" id="name" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['evt_title'];?>
 " />
             </fieldset>
             <fieldset>
@@ -181,7 +186,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <fieldset>
                 <label>Date</label>
                 <input type="text" name ="date" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['evt_date'];?>
-" id="datepicker" />
+" id="datepicker" onclick="javascript:NewCssCal('datepicker','YYYYMMDD')"/>
             </fieldset>    
             <fieldset>
                 <label>Description</label>
@@ -190,13 +195,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </fieldset>  
             <fieldset>
                 <label>Image</label>
+                <?php if ($_smarty_tpl->tpl_vars['image_path']->value!=''){?>
+                <input type="image" style="margin-left:-100px;" src="../../../<?php echo $_smarty_tpl->tpl_vars['image_path']->value;?>
+" width="100px" height="100px">
+                <?php }?>
                 <input type="file" name ="image" />
             </fieldset>   
             <div class="clear"></div>
             </div>
             <footer>
                 <div class="submit_link">
-                    <input type="submit" name="addEvent" value="Update Event" class="alt_btn">
+                    <input type="submit" name="addEvent" value="Update Event" onClick="return check_data();" class="alt_btn">
                     <input type="reset" value="Reset">
                 </div>
             </footer>
@@ -204,8 +213,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</article><!-- end of post new article -->
 		<div class="spacer"></div>
 	</section>
-
-
+<script language="javascript" type="text/javascript">
+function check_data(){
+	var name_obj = document.getElementById("name");
+	if(name_obj.value == ""){
+		alert("Input Title");
+		name_obj.focus();
+		return false;
+	}
+}
+</script>
 </body>
 
 </html>

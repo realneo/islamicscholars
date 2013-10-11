@@ -100,13 +100,15 @@ sub {
 
 img {
   width: auto\9;
-  height: auto;
+  
   max-width: 100%;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
-
+#pic_slider ul li{
+list-style:none;
+}
 #map_canvas img,
 .google-maps img {
   max-width: none;
@@ -312,6 +314,10 @@ a:focus {
   width: 620px;
 }
 
+.spannav{
+  width: 560px;
+}
+
 .span7 {
   width: 540px;
 }
@@ -385,7 +391,7 @@ a:focus {
 }
 
 .offset1 {
-  margin-left: 100px;
+  margin-left: 65px;
 }
 
 .row-fluid {
@@ -1667,10 +1673,10 @@ select:focus:invalid:focus {
 .input-append,
 .input-prepend {
   display: inline-block;
-  margin-bottom: 10px;
   font-size: 0;
   white-space: nowrap;
   vertical-align: middle;
+  height: 67px;
 }
 
 .input-append input,

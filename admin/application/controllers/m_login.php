@@ -1,7 +1,7 @@
 <?php
 if (! defined ( 'BASEPATH' ))	exit ( 'No direct script access allowed' );
 
-//ini_set('display_errors','On');
+ini_set('display_errors','On');
 //error_reporting(E_ALL);
 class M_login extends CI_Controller {
 	/**
@@ -39,14 +39,14 @@ class M_login extends CI_Controller {
 
 			if($userinfo['err']){
 				echo '<script>alert("Incorrect Username or Password!"); </script>';
-				$geturl="/islamicscholars/admin/index.php/m_login/index";
+				$geturl="/".PROJECTNAME."/index.php/m_login/index";
 				//var_dump($geturl);die();
 //				Header("Location: $geturl"); 
 	            echo '<script>window.open("'.$geturl.'","_self");</script>';
 			} else {
 				if(empty($url))
 				{
-					$seturl ="/islamicscholars/admin/index.php/m_event/index/1/";
+					$seturl ="/".PROJECTNAME."/index.php/m_event/index/1/";
 				}
 				else {
 				$seturl=str_replace('-','/',$url);
@@ -59,7 +59,7 @@ class M_login extends CI_Controller {
 		} else {
 			 
 			echo '<script>alert("Input Username or Password!"); </script>';
-			$geturl="/islamicscholars/admin/index.php/m_login/index";
+			$geturl="/".PROJECTNAME."/index.php/m_login/index";
 			 echo '<script>window.open("'.$geturl.'","_self");</script>';
 //			Header("Location: $geturl"); 
 		}
@@ -70,7 +70,7 @@ class M_login extends CI_Controller {
 	{
 		$this->manager_model->logout();
 		//$url ="/mxw/index.php";
-		header('Location: /islamicscholars/admin/index.php/m_login/index');
+		header('Location: /'.PROJECTNAME.'/index.php/m_login/index');
 	   // Header("Location: $url"); 
 	}
 	

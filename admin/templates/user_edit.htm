@@ -53,7 +53,7 @@
 
 <body>    <header id="header">
             <hgroup>
-                    <h1 class="site_title"><a href="index.html">Website Admin</a></h1>
+                    <h1 class="site_title"><a href="{$static_url}/index.php/m_event/index/1">Website Admin</a></h1>
                     <h2 class="section_title">Dashboard</h2>
                     <div class="btn_view_site"><a href="../index.php">View Site</a></div>
             </hgroup>
@@ -65,20 +65,13 @@
         </div>
         <div class="breadcrumbs_container">
             <article class="breadcrumbs">
-                <a href="home.php">Website Admin</a> 
+                <a href="{$static_url}/index.php/m_event/index/1">Website Admin</a> 
                 <div class="breadcrumb_divider"></div> 
                 <a class="current">Add New User</a>
             </article>
         </div>
     </section><!-- end of secondary bar -->
     <aside id="sidebar" class="column">
-<!--
-        <h3>Content</h3>
-        <ul class="toggle">
-            <li class="icn_new_article"><a href="#">Introduction Message</a></li>
-            <li class="icn_edit_article"><a href="#">About Us</a></li>
-        </ul>
--->
         <h3>Events</h3>
         <ul class="toggle">
             <li class="icn_categories"><a href="{$static_url}/index.php/m_event/add/" >Add Event</a></li>
@@ -89,25 +82,25 @@
             <li class="icn_add_user"><a href="{$static_url}/index.php/m_user/add/" >Add New User</a></li>
             <li class="icn_view_users"><a href="{$static_url}/index.php/m_user/index/1" >View Users</a></li>
         </ul>
-<!--
-        <h3>Projects</h3>
+        <h3>Scholars</h3>
         <ul class="toggle">
-                <li class="icn_folder"><a href="#">Add Project</a></li>
-                <li class="icn_photo"><a href="view_projects.php">View Projects</a></li>
+            <li class="icn_new_article"><a href="{$static_url}/index.php/m_scholar/add/" >Add Scholar</a></li>
+            <li class="icn_edit_article"><a href="{$static_url}/index.php/m_scholar/index/1" >View Scholars</a></li>
         </ul>
--->
-        <h3>News</h3>
+        <h3>Libraries</h3>
+        <ul class="toggle">
+                <li class="icn_folder"><a href="{$static_url}/index.php/m_lib/add/">Add Library</a></li>
+                <li class="icn_photo"><a href="{$static_url}/index.php/m_lib/index/1">View Libraries</a></li>
+        </ul>
+		<h3>News</h3>
         <ul class="toggle">
             <li class="icn_new_article"><a href="{$static_url}/index.php/m_news/add/" >Add News</a></li>
             <li class="icn_edit_article"><a href="{$static_url}/index.php/m_news/index/1" >View News</a></li>
         </ul>
-<!--
-        <h3>Biography</h3>
+		<h3>Calendar</h3>
         <ul class="toggle">
-            <li class="icn_new_article"><a href="biography.php">Add Biography</a></li>
-            <li class="icn_edit_article"><a href="view_biography.php">View Biography</a></li>
+            <li class="icn_new_article"><a href="{$static_url}/index.php/m_calendar/index/" >Set Calendar</a></li>
         </ul>
--->
         <h3>Admin</h3>
         <ul class="toggle">
             <li class="icn_jump_back"><a href="{$static_url}/index.php/m_login/logout/">Logout</a></li>
@@ -126,17 +119,17 @@
             <div class="module_content">
             <fieldset>
                 <label>Username</label>
-                <input type="text" name ="username" value="{$data.admin_login_id}" />
+                <input type="text" id="username" name ="username" value="{$data.admin_login_id}" />
             </fieldset>
             <fieldset>
                 <label>Password</label>
-                <input type="text" name ="password" value="{$data.admin_pwd}" />
+                <input type="text" id="password" name ="password" value="{$data.admin_pwd}" />
             </fieldset>
             <div class="clear"></div>
             </div>
             <footer>
                 <div class="submit_link">
-                    <input type="submit" name="addUser" value="Add New User" class="alt_btn">
+                    <input type="submit" name="addUser"  onClick="return check_data();" value="Add New User" class="alt_btn">
                     <input type="submit" value="Reset">
                 </div>
             </footer>
@@ -144,8 +137,23 @@
 		</article><!-- end of post new article -->
 		<div class="spacer"></div>
 	</section>
+<script language="javascript" type="text/javascript">
+function check_data(){
+	var name_obj = document.getElementById("name");
+	if(name_obj.value == ""){
+		alert("Input Title");
+		name_obj.focus();
+		return false;
+	}
+	var pwd_obj = document.getElementById("password");
+	if(pwd_obj.value == ""){
+		alert("Input Password");
+		pwd_obj.focus();
+		return false;
+	}
 
-
+}
+</script>
 </body>
 
 </html>

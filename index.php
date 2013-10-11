@@ -1,6 +1,6 @@
 <?php include('template/header.php'); ?>
 <title>Home Page</title>
-<?php include('template/left_pane.php');?>      
+<?php include('template/left_pane.php');?>       
     <div class="row">
 	<div class='span9' id='content'>
 

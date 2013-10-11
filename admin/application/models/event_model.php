@@ -57,12 +57,20 @@ class event_model extends CI_Model {
 	}
 	
 	public function  insert($name,$venue,$description,$date,$image){
-		$data =array('evt_title'=>$name,
-					'evt_venue'=>$venue,
-					'evt_date'=>$date,
-					'evt_desc'=>$description,
-					'evt_img'=>$image,
-					'evt_regdate'=>date("Y-m-d H:i:s"));
+		if($image == ""){
+			$data =array('evt_title'=>$name,
+						'evt_venue'=>$venue,
+						'evt_date'=>$date,
+						'evt_desc'=>$description,
+						'evt_regdate'=>date("Y-m-d H:i:s"));
+		}else{
+			$data =array('evt_title'=>$name,
+						'evt_venue'=>$venue,
+						'evt_date'=>$date,
+						'evt_desc'=>$description,
+						'evt_img'=>$image,
+						'evt_regdate'=>date("Y-m-d H:i:s"));
+		}
 		$this->db->insert('eventtb',$data);
 		return $this->db->insert_id();
 	}
@@ -70,12 +78,20 @@ class event_model extends CI_Model {
 
 	public function update($evt_id,$name,$venue,$description,$date,$image){
 		$where = array("evt_id"=>$evt_id);
-		$data =array('evt_title'=>$name,
-					'evt_venue'=>$venue,
-					'evt_date'=>$date,
-					'evt_desc'=>$description,
-					'evt_img'=>$image,
-					'evt_regdate'=>date("Y-m-d H:i:s"));
+		if($image == ""){
+			$data =array('evt_title'=>$name,
+						'evt_venue'=>$venue,
+						'evt_date'=>$date,
+						'evt_desc'=>$description,
+						'evt_regdate'=>date("Y-m-d H:i:s"));
+		}else{
+			$data =array('evt_title'=>$name,
+						'evt_venue'=>$venue,
+						'evt_date'=>$date,
+						'evt_desc'=>$description,
+						'evt_img'=>$image,
+						'evt_regdate'=>date("Y-m-d H:i:s"));
+		}
 		$this->db->where($where);
 		$this->db->update('eventtb',$data);
 	}	

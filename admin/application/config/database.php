@@ -51,7 +51,7 @@ $active_record = TRUE;
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'neo';
 $db['default']['password'] = 'matrix03';
-$db['default']['database'] = 'islamic_scholars';
+$db['default']['database'] = 'islamicscholars';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'h_';
 $db['default']['pconnect'] = TRUE;
@@ -63,7 +63,6 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
-
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
