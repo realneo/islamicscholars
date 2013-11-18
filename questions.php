@@ -3,12 +3,12 @@
 <?php include('template/left_pane.php');?>  
 <?php
 session_start();
-if (isset($_SESSION["id"])) {
-    $id = $_SESSION["id"];
+if (isset($_SESSION["user_id"])) {
+    $user_id = $_SESSION["user_id"];
 }
 else
 {
-    $id = "";	
+    $user_id = "";	
 }
 ?>    
     <div class="row">
@@ -18,7 +18,7 @@ else
 				if(isset($_POST['send'])){
 					$ques = $_POST['ques'];
 					if ($ques != "") {
-						$sqlCommand = "INSERT INTO h_querytb VALUES('', '$id','$ques',now(),'','','','no')";  
+						$sqlCommand = "INSERT INTO h_querytb VALUES('', '$user_id','$ques',now(),'','','','no')";  
 						$query = mysql_query($sqlCommand) or die (mysql_error());
 						$msg = "<span style='color:green;'>Jazakallahu Khairan for your contribution.</span>";
 						header ("Location: questions.php");
@@ -73,7 +73,7 @@ else
 									$msg = "";
 									if($quanswered == 'yes')
 									{
-										$msg = "<a href='answers.php?id=$id'><button type='submit' class='btn btn-small btn-inverse'>View Answer</button></a>";
+										$msg = "<a href='answers.php?id=$user_id'><button type='submit' class='btn btn-small btn-inverse'>View Answer</button></a>";
 									}
 									else{
 										$msg = "<button class='btn btn-small btn-inverse'>Not Answered</button>";

@@ -193,3 +193,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 #msg_body{
     display:none;
 }
+.two_lines{
+    height:40px;
+    overflow: hidden;
+}
