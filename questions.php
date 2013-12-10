@@ -12,7 +12,7 @@ else
 }
 ?>    
     <div class="row">
-	<div class='span9' id='content'>
+	<div class='span8' id='content'>
 			<?php
 				$msg = "";
 				if(isset($_POST['send'])){

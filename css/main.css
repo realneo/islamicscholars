@@ -7,12 +7,39 @@ body {
     background-size: cover;
     height: auto;
 }
-#calendar{
-    background:rgba(255,255,255,0.5);
-}
+
+/* Header ****************************************/
 #header{
     text-align: right;
 }
+#header .top_heading{
+    color: #fff;
+    font-weight: lighter;
+    padding-top:30px;
+    font-size:22px;
+}
+
+/* Greed Strip ***********************************/
+#green_strip{
+    position: absolute;
+    left:0px;
+    top:100px;
+    height:60px;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+/* Logo ******************************************/
+#logo{
+    position:absolute;
+    top:0px;
+}
+/* Calendar **************************************/
+#calendar{
+    background:rgba(255,255,255,0.5);
+}
+
 #download:hover{
 	text-decoration:none;
 }
@@ -28,28 +55,10 @@ body {
 #register_now a:hover{
     color:#fff;
 }
-#green_strip{
-    position: absolute;
-    left:0px;
-    top:100px;
-    height:60px;
-    width:100%;
-    background:rgba(0,0,0,0.6);
-    z-index: -1;
-}
 h3{
     font-weight: lighter;
 }
-#header .top_heading{
-    color: #fff;
-    font-weight: lighter;
-    padding-top:30px;
-    font-size:22px;
-}
-#logo{
-    position:absolute;
-    top:0px;
-}
+
 .container{
     min-width: 960px;
 }
@@ -61,17 +70,8 @@ h3{
     font-size:13px;
     font-weight: lighter;
 }
-#left_pane{
+.opacity-5{
     background:rgba(255,255,255,0.5);
-}
-#left_pane a{
-    color:#000;
-}
-#left_pane h5, ul, address{
-    padding-left: 10px;
-}
-#left_pane .input-append input, button{
-    margin-left:10px;
 }
 #pic_slider{
     background:rgba(255,255,255,0.5);

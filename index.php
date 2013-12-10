@@ -2,42 +2,42 @@
 <title>Home Page</title>
 <?php include('template/left_pane.php');?>       
     <div class="row">
-	<div class='span9' id='content'>
-
-        <?php include('modules/image_slider.php'); ?>
-        <div id="welcome_msg" class="span9">
-            <div class="title_bar">Welcome to The Foundation of Sheikhs and Islamic Scholars of Tanzania <button type="submit" class="btn  btn-mini btn-inverse pull-right msg_read_btn">Read More</button></div><!-- title_bar -->
-            <div class="msg_body two_lines" id='msg_body'>
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
-                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.  
-            </div><!-- msg_body-->
-        </div><!-- welcome_msg -->
+		<div class='span9'>
+        	<?php include('modules/image_slider.php'); ?>
+	        <div id="welcome_msg" class="span9">
+	            <div class="title_bar">Welcome to The Foundation of Sheikhs and Islamic Scholars of Tanzania <button type="submit" class="btn  btn-mini btn-inverse pull-right msg_read_btn">Read More</button></div><!-- title_bar -->
+	            <div class="msg_body two_lines" id='msg_body'>
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.
+	                Islam and Christianity are the two main religions with big number of believers in Tanzania and they are the main religions in which political, public leaders and most businessmen come from.  
+	                <a href="about.php" class="btn btn-small btn-inverse">Read More</a>
+	            </div><!-- msg_body-->
+	        </div><!-- welcome_msg -->
 		
             <!--<div id="join_forum" class="span9">
                 <div class="title_bar_brown">Join our Discussion Area Today</div>
@@ -58,7 +58,12 @@
                             $date = $row['sclar_date'];
                             $scholar_name = $row['sclar_name'];
                             $id = $row['sclar_id'];
-                            echo "<tr><td width='25%' style='font-weight:bold;'>$date</td><td width='65%'>$scholar_name</td><td width='10%'><button type='submit' class='btn btn-small btn-inverse'>View</button></td></tr>";
+                            echo "<tr>
+                                    <td width='25%' style='font-weight:bold;'>$date</td>
+                                        <td width='65%'>$scholar_name</td><td width='10%'>
+                                            <a href='scholar.php?id={$id}' class='btn btn-small btn-inverse'>View </a>
+                                        </td>
+                                    </tr>";
                         }
                     }else{
                         echo "<tr><td></td><td>No Recently Added Scholars / Sheikhs</td><td></td></tr>";
@@ -119,7 +124,7 @@
             </div>
 
     </div>
-	</div><!-- content -->
+	</div><!-- row -->
 <br />
 <?php include('template/footer.php');?> 
 <?php include('template/sponsors.php');?>
