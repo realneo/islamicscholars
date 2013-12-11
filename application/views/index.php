@@ -15,9 +15,13 @@
 <html>
 	<head>
 		<?php
+            echo link_tag('assets/img/logo.png', 'shortcut icon', 'image/ico');
 			echo link_tag('assets/css/bootstrap.css');
 			echo link_tag('assets/css/main.css');
 		?>
+        <script type='text/javascript' src='../assets/js/jquery-1.10.2.min.js'></script>
+        <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src='../assets/js/bootstrap-carousel.js'></script>
 		<title>Islamic Scholars</title>
 	</head>
 	<body>
@@ -78,7 +82,7 @@
                 </div><!-- nav -->
                 
                 <div class="span9">
-                    <h1>Yeah this is the content</h1>
+                    <?php $this->load->view('corousel'); ?>
                 </div>
                 
             </div>
