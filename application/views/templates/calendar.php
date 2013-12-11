@@ -80,7 +80,7 @@
     /* sample usages */
     //echo '<h2>August 2013</h2>';
     //echo draw_calendar(8,1434);
-    echo '<h2>'.date('M').' '.date('Y').'</h2>';
+    echo '<h2 class="white text-center">'.date('M').' '.date('Y').'</h2>';
     echo draw_calendar(date('n'),date('Y'));
     ?>
 </div>

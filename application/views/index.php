@@ -21,11 +21,33 @@
 		<title>Islamic Scholars</title>
 	</head>
 	<body>
+        <div id="green_strip"></div>
 		<div class='container'>
             <div class="row">
-                <!-- Calendar -->
-                <div class="span3"><?php $this->load->view('templates/calendar'); ?></div>
-                <div class="span2">
+                <!-- Left Pane -->
+                <div class="span3 opacity-5">
+                    <?php $this->load->view('templates/calendar'); ?>
+                    
+                    <div id="left_pane">
+                        <div class="thumbnail white badge-success">Latest News</div>
+                        
+                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <p class="white"> Yeah Yeah Yeah</p>
+                        
+                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <p class="white"> Yeah Yeah Yeah</p>
+                        
+                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <p class="white"> Yeah Yeah Yeah</p>
+                        
+                        <div class="thumbnail white badge-important">Upcoming Events</div>
+                        
+                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <p class="white"> Yeah Yeah Yeah</p>
+                        
+                    </div>
+                </div>
+                <div class="span2" id="top_logo">
                     <?php
                         $image_properties = array(
                             'src' => 'assets/img/logo.png',
@@ -34,6 +56,19 @@
                         echo img($image_properties);
                     ?>
                 </div>
+                <div class="span7" id="top_heading">The Foundation of Sheikhs and Islamic Scholars of Tanzania</div>
+                <?php
+                    echo anchor('donate', 'Donate Now', array('class' => 'btn btn-warning', 'id' => 'donate_btn'));
+                ?>
+                
+                <div class="nav nav-tabs span nav" id="top_nav">
+                    <li class="active"><?php echo anchor('home', 'Home'); ?></li>
+                    <li><?php echo anchor('about', 'About Us'); ?></li>
+                    <li><?php echo anchor('scholars', 'Imams & Scholars'); ?></li>
+                    <li><?php echo anchor('events', 'Events'); ?></li>
+                    <li><?php echo anchor('library', 'Library'); ?></li>
+                    <li><?php echo anchor('qa', 'Q & A'); ?></li>
+                </div><!-- nav -->
             </div>
 		</div><!-- container -->
 	</body>
