@@ -63,6 +63,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 /* CLASSES **********************************/
 .opacity-5{background:rgba(0,0,0,0.5);}
 .white{color:#fff;}
+.title_bar_white{
+    background-color:#fff;
+    height:20px;
+    width:auto;
+    padding: 5px 5px;
+    color:#000;
+}
 
 /* TOP LOGO *********************************/
 #top_logo{

@@ -29,20 +29,27 @@
                     <?php $this->load->view('templates/calendar'); ?>
                     
                     <div id="left_pane">
-                        <div class="thumbnail white badge-success">Latest News</div>
+                        <div class="title_bar_white">Latest News</div>
                         
-                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <h5 class="white">Enter the Matrix was almost the best game ever.</h5>
+                        <p class="white"> Yeah Yeah Yeah</p>
+                        <hr />
+                        
+                        <h5 class="white">Enter the Matrix was almost the best game ever.</h5>
+                        <p class="white"> Yeah Yeah Yeah</p>
+                        <hr />
+                        
+                        <h5 class="white">Enter the Matrix was almost the best game ever.</h5>
                         <p class="white"> Yeah Yeah Yeah</p>
                         
-                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <div class="title_bar_white">Upcoming Events</div>
+                        
+                        <h5 class="white">Enter the Matrix was almost the best game ever.</h5>
                         <p class="white"> Yeah Yeah Yeah</p>
                         
-                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
-                        <p class="white"> Yeah Yeah Yeah</p>
+                         <div class="title_bar_white">Quick Contacts</div>
                         
-                        <div class="thumbnail white badge-important">Upcoming Events</div>
-                        
-                        <h5 class="well well-small">Enter the Matrix was almost the best game ever.</h5>
+                        <h5 class="white">Enter the Matrix was almost the best game ever.</h5>
                         <p class="white"> Yeah Yeah Yeah</p>
                         
                     </div>
@@ -69,7 +76,13 @@
                     <li><?php echo anchor('library', 'Library'); ?></li>
                     <li><?php echo anchor('qa', 'Q & A'); ?></li>
                 </div><!-- nav -->
+                
+                <div class="span9">
+                    <h1>Yeah this is the content</h1>
+                </div>
+                
             </div>
+            
 		</div><!-- container -->
 	</body>
 </html>
