@@ -83,6 +83,12 @@
                 
                 <div class="span9">
                     <?php $this->load->view('corousel'); ?>
+                    <div class="title_bar_white">Welcome Message</div>
+                    <div class="opacity-5 white">
+                        <?php foreach ($welcome_msg as $msg): ?>
+                            <?php echo $msg->text; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
                 
             </div>

@@ -98,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 /*LEFT PANE *******************************/
 
 #left_pane{
-    padding-top:50px;
+    padding-top:30px;
 }
 
 #left_pane hr {

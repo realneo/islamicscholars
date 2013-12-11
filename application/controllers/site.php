@@ -4,22 +4,13 @@ class Site extends CI_Controller
 {
 	
 	public function index()
-	{
-		// Sets the base_url settings and assigns it to $base
-		$this->base = $this->config->item('base_url');
-		$data['base'] = $this->base;
-		
-		// Sets the page name that will be called from the templates/template.php
-		//$data['page_name'] = 'home';
-		
-		//$this->load->model('news_model');
-		//$data['news'] = $this->news_model->get_all_news();
-		
-		// Makes the Variables global
-		//$this->load->vars($data);
+	{   
+        // Welcome Message Model
+        $this->load->model('welcome_msg');
+        $data['welcome_msg'] = $this->welcome_msg->get_msg();
 
 		// Loads the templates/template.php
-		$this->load->view('index.php');
+		$this->load->view('index.php' , $data);
 	}
 	
 	
