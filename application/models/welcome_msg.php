@@ -19,4 +19,16 @@ class Welcome_msg extends CI_Model
         return $data;
         }
     }
+    
+    public function update_msg()
+    {
+        $data['welcome_msg'] = $this->post->welcome_msg; 
+        $this->load->model('welcome_msg');
+        
+        $data = array('text' => $welcome_msg);
+
+        $this->db->where('id', 1);
+        $this->db->update('welcome_msg', $data);
+
+    }
 }

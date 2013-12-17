@@ -10,8 +10,13 @@ class Site extends CI_Controller
         $data['welcome_msg'] = $this->welcome_msg->get_msg();
 
 		// Loads the templates/template.php
-		$this->load->view('index.php' , $data);
+		$this->load->view('index' , $data);
 	}
+    
+    public function modify_welcome_msg()
+    {
+        $this->load->view('admin/modify_welcome_msg');
+    }
 	
 	
 }
