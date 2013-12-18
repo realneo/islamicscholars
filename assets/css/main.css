@@ -62,13 +62,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 
 /* CLASSES **********************************/
 .opacity-5{background:rgba(0,0,0,0.5);}
+.opacity-7{background:rgba(0,0,0,0.7);}
+.opacity-9{background:rgba(0,0,0,0.9);}
 .white{color:#fff;}
+.bg-white{background-color:#fff;}
+.bg-black{background-color:#000;}
 .title_bar_white{
     background-color:#fff;
     height:20px;
     width:auto;
     padding: 5px 5px;
     color:#000;
+}
+.tableOne{
+    text-align: left;
+    width:100%;
+}
+.tableOne th{
+    color:#fff;
+    padding:6px;
+    background-color:#000;
+    font-weight: lighter;
+    font-size:18px;
+}
+.tableOne tr{
+    border-bottom: #ccc 1px solid;
+    cursor: pointer;
+}
+.tableOne tr:hover{
+    background:rgba(0,0,0,1.0);
+}
+.tableOne td{
+    color:#fff;
+    padding:3px;    
 }
 
 /* TOP LOGO *********************************/
@@ -108,6 +134,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 #left_pane h5, #left_pane p{
     padding:0px 5px;
 }
+
 #left_pane p{
     font-size: 12px;
     line-height: 12px;

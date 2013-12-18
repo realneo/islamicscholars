@@ -1,25 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<?php 
+	// HTML 5 Doctypte
+	echo doctype('html5');
+	
+	// Meta Tags
+	$meta = array(
+	        array('name' => 'robots', 'content' => 'no-cache'),
+	        array('name' => 'description', 'content' => 'The only website in Tanzania that you will find the most genuine information about Scholars, Imams and Sheikhs. Swahili Mawaidha and a Large database of Library'),
+	        array('name' => 'keywords', 'content' => 'Imams, scholars, sheikhs, tanzania, swahili'),
+	        array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
+	    );
+	echo meta($meta);
+?>
+
+<html>
 	<head>
-		<?php $this->load->view('templates/header_tags'); ?>
+		<?php
+            echo link_tag('assets/img/logo.png', 'shortcut icon', 'image/ico');
+			echo link_tag('assets/css/bootstrap.css');
+			echo link_tag('assets/css/main.css');
+		?>
+        <script type='text/javascript' src='<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js'></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src='<?php echo base_url(); ?>/assets/js/bootstrap-carousel.js'></script>
+		<title>Islamic Scholars</title>
 	</head>
-    <body>
-        <div class='container'>
-           	<div class='row'>
-                <?php $this->load->view('templates/calendar'); ?>
-                <div id='header'class='span7'>
-                    <div id='green_strip'></div><!-- green_strip -->
-                    <h3 class='span9 top_heading'>The Foundation of Sheikhs and Islamic Scholars of Tanzania</h3>
-                    <div id='logo'><a href="index.php"><img src='<?php echo $base; ?>/assets/img/logo.png' alt='logo' width='120'/></a></div><!-- logo -->
-                    <a href="donate.php" class="btn btn-warning span2 offset7">Donate Now</a>
-                    <div id='nav' class="nav nav-tabs spannav lead">
-                            <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="scholars.php">Imams & Scholars</a></li>
-                            <li><a href="events.php">Events</a></li>
-                            <li><a href="library.php">Library</a></li>
-                            <li><a href="questions.php">FAQ</a></li>
-                            <li><a href="contacts.php">Contact Us</a></li>
-                    </div><!-- nav -->
-                </div><!-- header -->
-            </div><!-- row [top_content] -->
+	<body>
+        <div id="green_strip"></div>
+		<div class='container'>
+            <div class="row">
+                <?php $this->load->view('templates/left_pane'); ?>
+                <div class="span2" id="top_logo">
+                    <?php
+                        $image_properties = array(
+                            'src' => 'assets/img/logo.png',
+                            'alt' => 'The Foundation of Sheikhs and Islamic Scholars of Tanzania Logo'
+                        );
+                        echo img($image_properties);
+                    ?>
+                </div>
+                <div class="span7" id="top_heading">The Foundation of Sheikhs and Islamic Scholars of Tanzania</div>
+                <?php
+                    echo anchor('donate', 'Donate Now', array('class' => 'btn btn-warning', 'id' => 'donate_btn'));
+                ?>
+                <!-- Navigation Bar -->
+                
+                <div class="nav nav-tabs span nav" id="top_nav">
+                    <li class="active"><?php echo anchor('site/index', 'Home'); ?></li>
+                    <li><?php echo anchor('site/about', 'About Us'); ?></li>
+                    <li><?php echo anchor('site/scholars', 'Imams & Scholars'); ?></li>
+                    <li><?php echo anchor('site/events', 'Events'); ?></li>
+                    <li><?php echo anchor('site/library', 'Library'); ?></li>
+                    <li><?php echo anchor('site/qa', 'Q & A'); ?></li>
+                </div>
+                
+                
