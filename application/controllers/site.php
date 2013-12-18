@@ -30,7 +30,7 @@ class Site extends CI_Controller
 
 		// Loads the templates/template.php
         $data['page_name'] = 'index';
-		$this->load->view('templates/template' , $data);
+		$this->load->view('templates/template', $data);
         
 	}
     
@@ -38,12 +38,15 @@ class Site extends CI_Controller
     {
         // Left pane
         $data['news'] = $this->news_model->get_news(3);
-        
         $data['events'] = $this->events_model->get_events(3);
+        
+        //About Us Information
+        $this->load->model('about_model');
+        $data['about_us'] = $this->about_model->get_about();
         
         // Loads the templates/template.php
         $data['page_name'] = 'about';
-		$this->load->view('templates/template' , $data);
+		$this->load->view('templates/template', $data);
     }
 	
 }
