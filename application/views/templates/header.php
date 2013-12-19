@@ -15,13 +15,14 @@
 <html>
 	<head>
 		<?php
-            echo link_tag('assets/img/logo.png', 'shortcut icon', 'image/ico');
-			echo link_tag('assets/css/bootstrap.css');
-			echo link_tag('assets/css/main.css');
+            // Stylesheet
+            echo link_tag(img_url('logo.png'), 'shortcut icon', 'image/ico');
+			echo link_tag(css_url('bootstrap.css'));
+			echo link_tag(css_url('main.css'));
 		?>
-        <script type='text/javascript' src='<?php echo base_url(); ?>/assets/js/jquery-1.10.2.min.js'></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src='<?php echo base_url(); ?>/assets/js/bootstrap-carousel.js'></script>
+        <script type="text/javascript" src="<?php echo js_url('jquery-1.10.2.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo js_url('bootstrap.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo js_url('bootstrap-carousel.js'); ?>"></script>
 		<title>Islamic Scholars</title>
 	</head>
 	<body>

@@ -9,7 +9,7 @@ class About_model extends CI_Model
     
     public function get_about()
     {
-        $query = $this->db->get('about_us');
+            $query = $this->db->get('about_us');
         if($query->num_rows() > 0)
         {
             foreach ($query->result() as $row) 
