@@ -1,0 +1,12 @@
+body {
+   background: url(../../design/images/bkg-yellow.png) fixed;
+}
+a {
+   color: #8B6400;
+}
+a:hover {
+   color: #8B6400;
+}
+.Activities .Meta a ,.MessageList .Meta a {
+color: #8B6400;
+}

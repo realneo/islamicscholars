@@ -136,11 +136,11 @@ h5 {
 }
 a {
    text-decoration: none;
-   color: #fff;
+   color: #1e79a7;
 }
 a:hover {
    text-decoration: none;
-   color: #ccc;
+   color: #ff0084;
 }
 img.Thumbnail {
 	max-height: 300px;
@@ -1909,7 +1909,7 @@ div.Popup form ul li label.RadioLabel {
   + Mine: the user created the discussion
   + New: there are new comments since the last viewed the discussion
 */
-.Mine { background:rgba(0,0,0,0.5); }
+.Mine { background: #e3f4ff; }
 
 .DataList .Meta a.Category {
    background: #fafafa;
@@ -2281,8 +2281,11 @@ body.Conversations a.Cancel {
 
 /* Container */
 .Border {
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
 	background: none repeat scroll 0 0 rgba(82, 82, 82, 0.7);
-	padding: 3px;
+	padding: 10px;
 }
 
 /* Tabs */
