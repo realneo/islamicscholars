@@ -5,7 +5,12 @@
         <br />
         <div class="container-fluid opacity-9">
             <div class="container">
-                <h1>Hey</h1>
+                <div class='row'>
+                    <?php
+                    echo anchor('site/index', 'Home')
+                ?>
+                </div>
+                
             </div>
         </div>
 	</body>

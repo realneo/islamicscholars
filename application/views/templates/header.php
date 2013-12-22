@@ -41,7 +41,7 @@
                 </div>
                 <div class="span7" id="top_heading">The Foundation of Sheikhs and Islamic Scholars of Tanzania</div>
                 <?php
-                    echo anchor('donate', 'Donate Now', array('class' => 'btn btn-warning', 'id' => 'donate_btn'));
+                    echo anchor('site/donate', 'Donate Now', array('class' => 'btn btn-warning', 'id' => 'donate_btn'));
                 ?>
                 <!-- Navigation Bar -->
                 

@@ -18,7 +18,7 @@ class Site extends CI_Controller
         
         // Questions & Answers Model
         $this->load->model('questions_model');
-        $data['questions'] = $this->questions_model->get_questions(5);
+        $data['questions'] = $this->questions_model->get_answered_questions(5);
         
         // Left pane
         $data['news'] = $this->news_model->get_news(3);
@@ -55,6 +55,10 @@ class Site extends CI_Controller
         $data['news'] = $this->news_model->get_news(3);
         $data['events'] = $this->events_model->get_events(3);
         
+        // Imams and Scholars
+        $this->load->model('scholars_model');
+        $data['scholars'] = $this->scholars_model->get_scholars(5);
+        
         // Loads the templates/template.php
         $data['page_name'] = 'scholars';
 		$this->load->view('templates/template', $data);
@@ -68,6 +72,7 @@ class Site extends CI_Controller
         
         $data['all_events'] = $this->events_model->get_events(10);
         
+        
         // Loads the templates/template.php
         $data['page_name'] = 'events';
 		$this->load->view('templates/template', $data);
@@ -79,6 +84,12 @@ class Site extends CI_Controller
         $data['news'] = $this->news_model->get_news(3);
         $data['events'] = $this->events_model->get_events(3);
         
+        $this->load->model('library_model');
+        $data['articles'] = $this->library_model->get_articles();
+        $data['books'] = $this->library_model->get_books();
+        $data['audios'] = $this->library_model->get_audios();
+        $data['videos'] = $this->library_model->get_videos();
+        
         // Loads the templates/template.php
         $data['page_name'] = 'library';
 		$this->load->view('templates/template', $data);
@@ -89,6 +100,10 @@ class Site extends CI_Controller
         // Left pane
         $data['news'] = $this->news_model->get_news(3);
         $data['events'] = $this->events_model->get_events(3);
+        
+        // Questions & Answers Model
+        $this->load->model('questions_model');
+        $data['questions'] = $this->questions_model->get_answered_questions(5);
         
         // Loads the templates/template.php
         $data['page_name'] = 'qa';
@@ -125,6 +140,52 @@ class Site extends CI_Controller
         
         // Loads the templates/template.php
         $data['page_name'] = 'event_item';
+		$this->load->view('templates/template', $data);
+    }
+    
+    public function scholar_item()
+    {
+        // Left pane
+        $data['news'] = $this->news_model->get_news(3);
+        $data['events'] = $this->events_model->get_events(3);
+        
+        $id = $this->input->get_post('id');
+        
+        // Imams and Scholars
+        $this->load->model('scholars_model');
+        $data['scholar_item'] = $this->scholars_model->get_scholar($id);
+        $data['scholars'] = $this->scholars_model->get_scholars(5);
+        
+        // Loads the templates/template.php
+        $data['page_name'] = 'scholar_item';
+		$this->load->view('templates/template', $data);
+    }
+    
+    public function qns_item()
+    {
+        // Left pane
+        $data['news'] = $this->news_model->get_news(3);
+        $data['events'] = $this->events_model->get_events(3);
+        
+        $id = $this->input->get_post('id');
+        
+        // qna
+        $this->load->model('questions_model');
+        $data['qns_item'] = $this->questions_model->get_question($id);
+        
+        // Loads the templates/template.php
+        $data['page_name'] = 'qns_item';
+		$this->load->view('templates/template', $data);
+    }
+    
+    public function donate()
+    {
+        // Left pane
+        $data['news'] = $this->news_model->get_news(3);
+        $data['events'] = $this->events_model->get_events(3);
+        
+        // Loads the templates/template.php
+        $data['page_name'] = 'donate';
 		$this->load->view('templates/template', $data);
     }
 }

@@ -26,7 +26,7 @@
                 <tr>
                     <td><?php echo $question->qu_id; ?></td>
                     <td><?php echo $question->qu_content; ?></td>
-                    <td><a href="#" class="btn btn-inverse">View Answer</a></td>
+                    <td><?php echo anchor("site/qns_item?id=$question->qu_id", 'View Answer', array('class' => 'btn btn-inverse btn-small'));?></td>
                 </tr>
             <?php endforeach; ?>
 
@@ -48,7 +48,7 @@
                         <tr>
                             <td><?php echo $scholar->sclar_id; ?></td>
                             <td><?php echo $scholar->sclar_name; ?></td>
-                            <td><a href="#" class="btn btn-inverse">View</a></td>
+                            <td><?php echo anchor("site/scholar_item?id=$scholar->sclar_id", 'View', array('class' => 'btn btn-default btn-small pull-right'));?></td>
                         </tr>
                     <?php endforeach; ?>
 
@@ -58,7 +58,7 @@
         
         <div class='span4'>
             <div class="opacity-7">
-                <a href='#' class='btn btn-block btn-success btn-large'>JOIN US</a>
+                <?php echo anchor('forum', 'JOIN US', array('class' => 'btn btn-block btn-success btn-large'));?>
                 <p class='white text-center'>Register Now and be part of the bigger community for the best of the Ummah</p>
                 <ul class='white'>
                     <li>Ask questions to our trusted scholars</li>
