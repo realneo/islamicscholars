@@ -8,6 +8,11 @@ body {
     height: auto;
 }
 
+a:hover {
+    color:#fff;
+    text-decoration: none;
+}
+
 /* Calendar */
 table.calendar{border-style: solid; border-width: 1px; border-width:1px; border-color:#666; -moz-box-shadow:0px 0px 4px #CCCCCC; -webkit-box-shadow:0px 0px 4px #CCCCCC; box-shadow:0px 0px 4px #CCCCCC; }
 tr.calendar-row  {  }
@@ -65,6 +70,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 .opacity-7{background:rgba(0,0,0,0.7);}
 .opacity-9{background:rgba(0,0,0,0.9);}
 .white{color:#fff;}
+.lighter{font-weight:lighter;}
+.heading1{font-weight: lighter; font-size:22px;}
+.heading2{font-weight: lighter; font-size:16px;}
+.font-13{font-size: 13px;}
+.font-12{font-size: 12px;}
+.padding-all-5{padding:5px;}
 .bg-white{background-color:#fff;}
 .bg-black{background-color:#000;}
 .title_bar_white{

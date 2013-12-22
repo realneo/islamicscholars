@@ -66,6 +66,8 @@ class Site extends CI_Controller
         $data['news'] = $this->news_model->get_news(3);
         $data['events'] = $this->events_model->get_events(3);
         
+        $data['all_events'] = $this->events_model->get_events(10);
+        
         // Loads the templates/template.php
         $data['page_name'] = 'events';
 		$this->load->view('templates/template', $data);
@@ -90,6 +92,39 @@ class Site extends CI_Controller
         
         // Loads the templates/template.php
         $data['page_name'] = 'qa';
+		$this->load->view('templates/template', $data);
+    }
+    
+    // Particular data
+    
+    public function news_item()
+    {
+        // Left pane
+        $data['news'] = $this->news_model->get_news(3);
+        $data['events'] = $this->events_model->get_events(3);
+        
+        $id = $this->input->get_post('id');
+        $data['news_item'] = $this->news_model->get_news_item($id);
+        $data['new'] = $this->news_model->get_news(5);
+        
+        
+        // Loads the templates/template.php
+        $data['page_name'] = 'news_item';
+		$this->load->view('templates/template', $data);
+    }
+    
+    public function event_item()
+    {
+        // Left pane
+        $data['news'] = $this->news_model->get_news(3);
+        $data['events'] = $this->events_model->get_events(3);
+        
+        $id = $this->input->get_post('id');
+        $data['event_item'] = $this->events_model->get_event_item($id);
+        
+        
+        // Loads the templates/template.php
+        $data['page_name'] = 'event_item';
 		$this->load->view('templates/template', $data);
     }
 }

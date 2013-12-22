@@ -11,6 +11,7 @@
     <script src="themes/Noise/other/js/styles.js" type="text/javascript"></script>
 </head>
 <body id="<?php echo $BodyIdentifier; ?>" class="<?php echo $this->CssClass; ?>">
+    <a href="../" class="btn btn-inverse btn-large"><- Back to Main Website</a>
    <div id="Frame">
       <div id="Head">
          <div class="Menu">

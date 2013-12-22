@@ -8,8 +8,10 @@
             <table class="tableOne">
                 <tr>
                     <td>
-                        <h5><?php echo $new->news_title; ?></h5>
-                        <p><?php echo $new->news_brief; ?><p>
+                        <a href="<?php echo 'news_item?id='.$new->news_id; ?>">
+                            <h5><?php echo $new->news_title; ?></h5>
+                            <p><?php echo $new->news_brief; ?><p>
+                        </a>
                     </td>
                 </tr>
             </table>
@@ -21,9 +23,11 @@
             <table class="tableOne">
                 <tr>
                     <td>
+                        <a href="<?php echo 'event_item?id='.$event->evt_id; ?>">
                         <h5><?php echo $event->evt_name; ?></h5>
                         <p><?php echo $event->evt_date; ?><p>
                         <p><?php echo $event->evt_venue; ?><p>
+                        </a>
                     </td>
                 </tr>
             </table>
@@ -39,6 +43,7 @@
 
             <div class="title_bar_white">Join Our Discussion Forum</div>
             <div class="bg-white text-center">
+                <a href="forum/">
                 <?php
                     $image_properties = array(
                         'src' => 'assets/img/forum_icon.png',
@@ -46,6 +51,7 @@
                     );
                     echo img($image_properties);
                 ?>
+                </a>
             </div>
 
         </div>
