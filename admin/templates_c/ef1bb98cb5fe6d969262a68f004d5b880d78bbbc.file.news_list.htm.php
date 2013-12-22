@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2013-08-12 11:16:38
+<?php /* Smarty version Smarty-3.1.11, created on 2013-12-22 13:41:31
          compiled from "/Users/Administrator/Sites/islamicscholars/admin/templates/news_list.htm" */ ?>
 <?php /*%%SmartyHeaderCode:7589020605208a7f6ece8b8-60983036%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef1bb98cb5fe6d969262a68f004d5b880d78bbbc' => 
     array (
       0 => '/Users/Administrator/Sites/islamicscholars/admin/templates/news_list.htm',
-      1 => 1371508528,
+      1 => 1387715782,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_5208a7f7033b78_38370891',
   'variables' => 
   array (
     'static_url' => 0,
@@ -24,8 +26,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'news_page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_5208a7f7033b78_38370891',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5208a7f7033b78_38370891')) {function content_5208a7f7033b78_38370891($_smarty_tpl) {?>
 <!doctype html>
