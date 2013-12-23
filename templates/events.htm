@@ -1,0 +1,46 @@
+{include file='header.htm'}
+<div class='row'>
+    <div class='span4'>
+        <div class='title_bar_brown'>Past Events</div>
+        <div class='msg_body'>
+            <table class='table table-condensed table-hover'>
+					{foreach name=outer item=value from=$pastEvents} 
+                <tr>
+                    <td>{$value.evt_title}</td>
+                    <td><button type="submit" class="btn btn-small btn-inverse">View</button></td>
+                </tr>
+					{/foreach}
+            </table>
+        </div><!-- msg_body -->
+    </div>
+    
+    <div class='span4'>
+        <div class='title_bar_brown'>Current Month Events</div>
+        <div class='msg_body'>
+            <table class='table table-condensed table-hover'>
+					{foreach name=outer item=value from=$currentmonthEvents} 
+                <tr>
+                    <td>{$value.evt_title}</td>
+                    <td><button type="submit" class="btn btn-small btn-inverse">View</button></td>
+                </tr>
+					{/foreach}
+            </table>
+        </div><!-- msg_body -->
+    </div>
+    
+    <div class='span4'>
+        <div class='title_bar_brown'>Next Month Events</div>
+        <div class='msg_body'>
+            <table class='table table-condensed table-hover'>
+ 					{foreach name=outer item=value from=$nextmonthEvents} 
+               <tr>
+                    <td>{$value.evt_title}</td>
+                    <td><button type="submit" class="btn btn-small btn-inverse">View</button></td>
+                </tr>
+					{/foreach}
+            </table>
+        </div><!-- msg_body -->
+    </div>
+</div>
+{include file='footer.htm'}
+{include file='sponsors.htm'}
