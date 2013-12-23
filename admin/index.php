@@ -23,9 +23,9 @@
 	define("WEB_URL", "http://".$_SERVER["HTTP_HOST"]);
 	define('PROJECTNAME', 'islamicscholars/admin');
 	define('STATIC_URL', WEB_URL.'/'.PROJECTNAME);
-	define('EVENT_UPLOAD_URL', 'data/upload/event');
-	define('LIB_UPLOAD_URL', 'data/upload/lib');
-	define('SCHOLAR_UPLOAD_URL', 'data/upload/scholar');
+	define('EVENT_UPLOAD_URL', '../assets/img/events');
+	define('LIB_UPLOAD_URL', '../assets/library');
+	define('SCHOLAR_UPLOAD_URL', '../assets/img/scholars');
  
 /*
  *---------------------------------------------------------------
