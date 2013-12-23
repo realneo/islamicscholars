@@ -11,7 +11,9 @@
                 <div class="tab-pane active" id="tab1">
                     <div class="title_bar_white span9">Library | Articles</div>
                         <?php foreach($articles as $article): ?>
+                        <div class='row'>
                         <div class="opacity-5 span9">
+
                             <div class="span1"><img src="img/library/articles_icon.png" alt="" /></div>
                             <div class="span7 white">
                                 <div class="heading2"><?php echo $article->lib_title; ?></div>
@@ -21,12 +23,14 @@
                             </div>
                         </div>
                         <div class='span9'></div>
+                        </div>
                         <?php endforeach; ?>
                 </div>
                 
                 <div class="tab-pane" id="tab2">
                     <div class="title_bar_white span9">Library | Books</div>
                         <?php foreach($books as $book): ?>
+                    <div class='row'>
                         <div class="opacity-5 span9">
                             <div class="span1"><img src="img/library/books_icon.png" alt="" /></div>
                             <div class="span7 white">
@@ -37,12 +41,14 @@
                             </div>
                         </div>
                         <div class='span9'></div>
+                        </div>
                         <?php endforeach; ?>
                 </div>
                 
                 <div class="tab-pane" id="tab3">
                     <div class="title_bar_white span9">Library | Audios</div>
                         <?php foreach($audios as $audio): ?>
+                    <div class='row'>
                         <div class="opacity-5 span9">
                             <div class="span1"><img src="img/library/audios_icon.png" alt="" /></div>
                             <div class="span7 white">
@@ -53,12 +59,14 @@
                             </div>
                         </div>
                         <div class='span9'></div>
+                        </div>
                         <?php endforeach; ?>
                 </div>
                 
                 <div class="tab-pane" id="tab4">
                     <div class="title_bar_white span9">Library | Videos</div>
                         <?php foreach($videos as $video): ?>
+                    <div class='row'>
                         <div class="opacity-5 span9">
                             <div class="span1"><img src="img/library/videos_icon.png" alt="" /></div>
                             <div class="span7 white">
@@ -69,6 +77,7 @@
                             </div>
                         </div>
                         <div class='span9'></div>
+                        </div>
                         <?php endforeach; ?>
                 </div>
                 
