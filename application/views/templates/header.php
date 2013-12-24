@@ -16,7 +16,7 @@
 	<head>
 		<?php
             // Stylesheet
-            echo link_tag(img_url('logo.png'), 'shortcut icon', 'image/ico');
+            echo link_tag(img_url('favicon.png'), 'shortcut icon', 'image/ico');
 			echo link_tag(css_url('bootstrap.css'));
 			echo link_tag(css_url('main.css'));
 		?>
