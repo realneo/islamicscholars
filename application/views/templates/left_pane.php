@@ -34,8 +34,17 @@
 
             <div class="title_bar_white">Quick Contacts</div>
 
-            <h5 class="white">Enter the Matrix was almost the best game ever.</h5>
-            <p class="white"> Yeah Yeah Yeah</p>
+            <p class="white"><br /><br />P.O Box 71571
+                Kariakoo Morogoro / <br /><br />Lumumba road 2nd Floor.
+                <br /><br />Dar Es Salam</p><br />
+            <p class="white"><strong>Mobile </strong><br /><br />
+                +255713603050 / +255784603050<br /><br />
+
+                <br /><strong>Telephone</strong><br /><br />
+                +255 22 21184050 / 2184544<br />
+
+                <br /><strong>Fax</strong><br /><br />
+                +255-22-2184279</p>
 
             <button class="btn btn-block btn-info">Make An Appointment</button>
             <br />

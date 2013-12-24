@@ -35,8 +35,10 @@
                         $image_properties = array(
                             'src' => 'assets/img/logo.png',
                             'alt' => 'The Foundation of Sheikhs and Islamic Scholars of Tanzania Logo'
+
+
                         );
-                        echo img($image_properties);
+                            echo anchor('site/index', img($image_properties));
                     ?>
                 </div>
                 <div class="span7" id="top_heading">The Foundation of Sheikhs and Islamic Scholars of Tanzania</div>
