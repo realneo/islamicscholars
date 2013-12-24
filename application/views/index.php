@@ -4,8 +4,8 @@
     <?php $this->load->view('corousel'); ?>
 
     <!-- Welcome Message -->
-    <div class="title_bar_white">Welcome Message</div>
-    <div class="opacity-5 white">
+    <div class="title_bar_white">Welcome to The Foundation of Sheikhs and Islamic Scholars of Tanzania</div>
+    <div class="opacity-5 white padding-all-10">
         <?php foreach ($welcome_msg as $msg): ?>
             <?php echo $msg->text; ?>
         <?php endforeach; ?>
