@@ -9,17 +9,17 @@
             <div class="tab-content">
                 
                 <div class="tab-pane active" id="tab1">
-                    <div class="title_bar_white span9">Library | Articles</div>
+                    <div class="title_bar_white ">Library | Articles</div>
                         <?php foreach($articles as $article): ?>
                         <div class='row'>
                         <div class="opacity-5 span9">
 
-                            <div class="span1"><img src="img/library/articles_icon.png" alt="" /></div>
-                            <div class="span7 white">
-                                <div class="heading2"><?php echo $article->lib_title; ?></div>
+                            <div class="span1 padding-all-10"><img src="http://localhost/islamicscholars/assets/img/library/articles_icon.png" alt="" /></div>
+                            <div class="span7 white ">
+                                <div class="heading2 padding-all-5"><?php echo $article->lib_title; ?></div>
                                 <p class='lighter font-12'><?php echo $article->lib_desc; ?></p>
                                 <span class='lighter font-13'><?php echo $article->lib_author . " | " . $article->lib_date;?></span>
-                                <a href="<?php echo $article->lib_file; ?>" class="btn btn-default btn-small pull-right"> Download</a>
+                                <a href="<?php echo $article->lib_file; ?>" class="btn btn-default btn-small pull-right margin-bottom-5 "> Download</a>
                             </div>
                         </div>
                         <div class='span9'></div>

@@ -8,7 +8,7 @@
 
             <div class="span1"><?php echo img("assets/img/events/$event->evt_img"); ?></div>
 
-            <div class="span7 white">
+            <div class="span7 white ">
                 <div class="heading2"><?php echo $event->evt_name; ?></div>
                 <p class='lighter font-12'><?php echo $event->evt_desc; ?></p>
                 <span class='lighter font-13'><?php echo $event->evt_date . " | " . $event->evt_venue;?></span>
