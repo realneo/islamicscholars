@@ -751,6 +751,17 @@ h6 {
   color: inherit;
   text-rendering: optimizelegibility;
 }
+h7 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+  font-size:20px;
+  text-shadow: 2px 2px #000;
+}
+
 
 h1 small,
 h2 small,

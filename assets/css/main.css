@@ -76,14 +76,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 .font-13{font-size: 13px;}
 .font-12{font-size: 12px;}
 .padding-all-5{padding:5px;}
+.padding-all-10{padding:20px;}
 .bg-white{background-color:#fff;}
 .bg-black{background-color:#000;}
+
 .title_bar_white{
     background-color:#fff;
     height:20px;
     width:auto;
     padding: 5px 5px;
-    color:#000;
+    text-shadow:0px 1px #CAA97C;
+    color:#51300a;
 }
 .tableOne{
     text-align: left;
