@@ -5,7 +5,9 @@
             <div class="padding-all-5 size-100"><?php echo img("assets/img/scholars/$scholar->sclar_img"); ?></div>
             <div class="brown padding-all-10"><strong>Date of Birth:</strong> <br /><?php echo $scholar->sclar_birth; ?></div>
             <div class="brown padding-all-10"><strong>Type:</strong> <br /><?php echo $scholar->sclar_type; ?></div>
-            <div class="brown padding-all-10"><strong>From:</strong> <br /><?php echo $scholar->sclar_from; ?></div>
+            <div class="brown padding-all-10 "><strong>From:</strong> <br /><?php echo $scholar->sclar_from; ?></div>
+
+
         </div>
         <div class='span15'>
             <div class="title_bar_white span7"><?php echo "ID: ". $scholar->sclar_id . " | ". $scholar->sclar_date; ?></div>

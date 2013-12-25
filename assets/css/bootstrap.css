@@ -6202,3 +6202,20 @@ a.badge:focus {
     width:510px;
     margin-left:20px;
 }
+
+/*will use it later
+
+.waiting{
+    color: #000;
+    font-weight: bold;
+    text-shadow: 1px 0px #ccc;
+    background-color: #2BB673;
+    width: 54px;
+    height: 1px;
+    border-radius: 33px;
+    margin-left: 19px;
+    border-width: 3px;
+    border-bottom-style: ridge
+
+}
+*/
