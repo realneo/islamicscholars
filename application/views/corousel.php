@@ -3,7 +3,7 @@
     <div class="item active">
         <?php
             $image_properties = array(
-                'src' => 'assets/img/slides/j2.jpg',
+                'src' => 'assets/img/slides/j1.jpg',
                 'alt' => 'Register Now',
                 'width' => '700',
                 'height' => '350'
@@ -22,7 +22,7 @@
     <div class="item">
       <?php
             $image_properties = array(
-                'src' => 'assets/img/slides/j1.jpg',
+                'src' => 'assets/img/slides/j2.jpg',
                 'alt' => 'Register Now',
                 'width' => '700',
                 'height' => '350'

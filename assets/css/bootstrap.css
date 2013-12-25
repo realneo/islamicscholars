@@ -6185,3 +6185,20 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+.size-100 {
+    margin-left: 6px;
+    margin-top: 3px;
+}
+
+.span14 {
+    width:160px;
+}
+.span15 {
+    width:520px;
+    margin-left:8px;
+}
+.span16 {
+    width:510px;
+    margin-left:20px;
+}

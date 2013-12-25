@@ -65,6 +65,8 @@
                     <li>Join Discussions</li>
                     <li>Get updates</li>
                     <li>A source of Muslims to Join Hands</li>
+                    <br />
+                    <br />
                 </ul>
             </div>
         </div>

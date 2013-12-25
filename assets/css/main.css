@@ -68,7 +68,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 /* CLASSES **********************************/
 .opacity-5{background:rgba(0,0,0,0.5);}
 .opacity-7{background:rgba(0,0,0,0.7);}
-.opacity-9{background:rgba(0,0,0,0.9);}
+.opacity-9{background:rgba(15, 8, 5, 0.88);}
+.opacity-9{background:rgba(15, 8, 5, 0.88);}
+.opacity-10{background:rgba(255, 255, 255, 0.5);}
+.brown{color:#20180C}
 .white{color:#fff;}
 .lighter{font-weight:lighter;}
 .heading1{font-weight: lighter; font-size:22px;}
@@ -156,4 +159,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 
 .margin-bottom-5{
     margin-bottom:5px;
+}
+.file-hover:hover{
+    background:rgba(77, 46, 5, 0.69);
+    cursor:crosshair;
 }
