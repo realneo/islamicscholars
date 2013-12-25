@@ -6202,20 +6202,18 @@ a.badge:focus {
     width:510px;
     margin-left:20px;
 }
-
-/*will use it later
-
-.waiting{
-    color: #000;
-    font-weight: bold;
-    text-shadow: 1px 0px #ccc;
-    background-color: #2BB673;
-    width: 54px;
-    height: 1px;
-    border-radius: 33px;
-    margin-left: 19px;
-    border-width: 3px;
-    border-bottom-style: ridge
+.span17 {
+    width: 700px;
+    margin-left:0px;
+}
+.span18 {
+    width: 152px;
+    margin-left: 14px;
+    margin-top: 10px;
 
 }
-*/
+.span19 {
+    width: 500px;
+    margin-right:4px;
+
+}

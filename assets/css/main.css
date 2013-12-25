@@ -76,6 +76,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6cb7f3', end
 .lighter{font-weight:lighter;}
 .heading1{font-weight: lighter; font-size:22px;}
 .heading2{font-weight: lighter; font-size:16px;}
+.heading3{font-weight: bold; font-size:16px; color:#F0C586;}
 .font-13{font-size: 13px;}
 .font-12{font-size: 12px;}
 .padding-all-5{padding:5px;}
