@@ -57,7 +57,7 @@ class Site extends CI_Controller
         
         // Imams and Scholars
         $this->load->model('scholars_model');
-        $data['scholars'] = $this->scholars_model->get_scholars(5);
+        $data['scholars'] = $this->scholars_model->get_scholars(15);
         
         // Loads the templates/template.php
         $data['page_name'] = 'scholars';
